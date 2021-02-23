@@ -1,14 +1,13 @@
 #!/bin/bash
 if [ -z "$1" ]
 then
-        echo "falta fitxer d'introduccio de alumnes, exemple 'alumnes_ldap.sh fitxer_creacio'"
+        echo "Falta fitxer d'introduccio de usuaris, exemple 'crear_usuaris_ldap.sh alumnes.txt alumnes'"
 else
         if [ -z "$2" ]
         then
-                echo "falta grup al que afegir usuaris"
+                echo "Falta grup al que afegir usuaris"
         else
                 read -p "Nom del fitxer resultant [fitxer.ldif]:" nomfitxer
-                echo "$2"
                 echo "---- Fitxer d'usuaris ----"
                 echo "$1"
                 echo "--------- Grup -----------"
