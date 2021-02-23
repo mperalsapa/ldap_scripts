@@ -5,10 +5,11 @@ Des d'una llista podem crear usuaris automaticament per despres fer-los servir a
 ```crear_usuaris_linux.sh /path/llista/usuaris.txt```
 
 El fitxer ha de contenir nomes noms d'usuaris, per exemple <br>
-FITXER D'EXEMPLE<br>
-agonzalez<br>
-psuarez<br>
-jhernandez<br>
+```
+agonzalez
+psuarez
+jhernandez
+```
 
 ## Crear usuaris a LDAP
 Com el de crear a linux, aquest script necessita una llista d'usuaris. Demana nom i cognom a l'hora d'introduir cada usuari.<br>
