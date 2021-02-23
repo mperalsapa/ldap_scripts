@@ -1,12 +1,7 @@
 #!/bin/bash
 read -p "Nom del fitxer resultant [fitxer.ldif]:" nomfitxer
-echo "$2"
-echo "---- Fitxer d'usuaris ----"
-echo "$1"
-echo "--------------------------"
 touch "$nomfitxer"
 echo "">"$nomfitxer"
-
 echo "Recorda: Es generara un fitxer amb el nom $nomfitxer"
 echo "El podrás executar amb sudo ldapadd -x -D cn=admin,dc=domini,dc=com -W -f $nomfitxer"
 
