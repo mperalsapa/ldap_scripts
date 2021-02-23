@@ -4,7 +4,6 @@ then
         echo "falta fitxer d'introduccio de usuaris, exemple 'grups_ldap.sh fitxer_usuaris.txt'"
 else
         read -p "Nom del fitxer resultant [fitxer.ldif]:" nomfitxer
-        echo "$2"
         echo "---- Fitxer d'usuaris ----"
         echo "$1"
         echo "--------------------------"
