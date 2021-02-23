@@ -11,6 +11,18 @@ psuarez
 jhernandez
 ```
 
+## Crear grups a linux
+Des d'una llista podem crear grups per despres fer-los servir amb els scripts d'LDAP.
+
+```crear_grups_linux.sh /path/llista/grups.txt```
+
+El fitxer ha de contenir noms de grups, per exemple <br>
+```
+Alumnes
+Professors
+Direccio
+```
+
 ## Crear usuaris a LDAP
 Com el de crear a linux, aquest script necessita una llista d'usuaris. Demana nom i cognom a l'hora d'introduir cada usuari.<br>
 Tambe demana un grup al que pertanyen. Per exemple, una llista d'alumnes pertany al grup "alumnes" de linux, no de LDAP.<br>
@@ -27,6 +39,17 @@ I finalment ens dona un exemple de comanda per fer servir
 ```
 S'ha generat el fitxer alumnes.ldif
 El pots executar amb: ldapadd -x -W -D 'cn=admin,dc=domini,dc=com' -f alumnes.ldif
+```
+
+## Crear grups LDAP
+Agafant d'una llita de grups genera un fitxer amb el gid d'aquestos per afegirlos a LDAP
+```
+crear_grups_ldap.sh /path/llista/grups.txt
+```
+Aquest script respon amb una comanda d'exemple
+```
+S'ha generat el fitxer grups.ldif
+El pots executar amb: ldapadd -x -W -D 'cn=admin,dc=domini,dc=com' -f grups.ldif
 ```
 
 ## Afegir usuaris LDAP a grup LDAP
