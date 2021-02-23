@@ -60,3 +60,22 @@ Introduides les anteriors dades ens indica que si volem sortir premem ctrl+c ja 
 ```
 per sortir del programa prem ctrl+c, les dades introduides s'han guardat.
 ```
+
+# Comandes utils LDAP
+## Afegir UO
+sudo ldapadd -x -D cn=admin,dc=domini,dc=com -W -f fitxer.ldif
+
+## Afegir usuari
+sudo ldapadd -x -W -D "cn=admin,dc=domini,dc=com" -f fitxer_usuari.ldif
+
+## Modificar contrassenya
+sudo ldappasswd -s Passw0rd -W -D "cn=admin,dc=domini,dc=com" -x "uid=usuari,ou=usuaris,dc=domini,dc=com"
+
+## Afegir grup
+sudo ldapadd -x -W -D "cn=admin,dc=domini,dc=com" -f fitxer_grups.ldif
+
+## Afegir usuaris a grups
+sudo ldapmodify -x -W -D "cn=admin,dc=domini,dc=com" -f fitxer.ldif
+
+## Mostrar usuaris en ldap
+sudo ldapsearch -x -LLL -b dc=domini,dc=com 'uid=*' | grep "dn: uid="
