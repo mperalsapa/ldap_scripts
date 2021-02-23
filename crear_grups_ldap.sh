@@ -22,5 +22,5 @@ else
             echo "gidNumber: $gid" >> $nomfitxer
         done
         echo "S'ha generat el fitxer $nomfitxer"
-        echo "El pots executar amb: ldapmodify -x -W -D 'cn=admin,dc=domini,dc=com' -f $nomfitxer"
+        echo "El pots executar amb: ldapadd -x -W -D 'cn=admin,dc=domini,dc=com' -f $nomfitxer"
 fi
