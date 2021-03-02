@@ -16,8 +16,8 @@ else
         for l in $(cat $1)
         do
             gid="$(cat /etc/group | grep $l | cut -d: -f3)"
-            echo "dn : $dn" >> $nomfitxer
-            echo "objectClass : top" >> $nomfitxer
+            echo "dn: $dn" >> $nomfitxer
+            echo "objectClass: top" >> $nomfitxer
             echo "objectClass: posixGroup" >> $nomfitxer
             echo "cn: $l" >> $nomfitxer
             echo "gidNumber: $gid" >> $nomfitxer
