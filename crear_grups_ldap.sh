@@ -19,7 +19,9 @@ else
             echo "dn : $dn" >> $nomfitxer
             echo "objectClass : top" >> $nomfitxer
             echo "objectClass: posixGroup" >> $nomfitxer
+            echo "cn: $l" >> $nomfitxer
             echo "gidNumber: $gid" >> $nomfitxer
+            echo "" >> $nomfitxer
         done
         echo "S'ha generat el fitxer $nomfitxer"
         echo "El pots executar amb: ldapadd -x -W -D 'cn=admin,dc=domini,dc=com' -f $nomfitxer"
