@@ -8,7 +8,7 @@ echo "El podrás executar amb sudo ldapadd -x -D cn=admin,dc=domini,dc=com -W -f
 while true;
 do
         read -p "Nom de la Unitat Organitzativa :" nomUo
-        read -p "Ruta de la UO [uo=patata,dc=dom,dc=com]:" rutaUo
+        read -p "Ruta de la UnitatOrganitzativa [ou=patata,dc=dom,dc=com]:" rutaUo
         echo "dn: $rutaUo" >> $nomfitxer
         echo "objectClass: organizationalUnit" >> $nomfitxer
         echo "ou: $nomUo" >> $nomfitxer
